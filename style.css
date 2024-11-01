@@ -1,3 +1,4 @@
+/* Estilo general */
 :root {
   --primary--color: #688EBD;
   --secondary--color: #4760A2;
@@ -9,5 +10,224 @@
 
 *{
   box-sizing: border-box;
+  padding: 0;
+  list-style: none;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  font-family: var(--font--family);
+  background-color: var(--quarte--color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.8em; text-align: center;}
+h3{ font-size: 2em;}
+h4{ font-size: 1.8em;}
+p{ font-size: 1.25em; text-align: center;}
+
+button{
+  font-size: 1.3em;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border-style: inherit;
+  background-color: var(--primary--color);
+  color: black;
+  cursor: pointer;
+}
+button:hover{
+  background-color: var(--quarte--color);
+  font-weight:bold;
+}
+
+/* Header */
+.contenedor{
+  max-width: 1400px;
+  margin: auto;
+}
+
+header{
+  background-color: var(--secondary--color);
+  position:relative;
+      width: 100%;
+}
+header .contenedor{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo img{
+  width: 150px;
+  padding: 20px 15px;
+}
+
+.menu{
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+.menu-icono{
+  width: 50px;
+  cursor: pointer;
+}
+#menu{
+  display: none;
+}
+#menu:checked ~ .navbar{
+  display: block;
+  max-height: 300px;
+}
+
+/* Navbar */
+.navbar{
+  max-height: 0;
+  overflow: hidden;
+  background-color: var(--secondary--color);
+  transition: max-height 0.5s ease-in-out;
+}
+.navbar ul{
+  margin-top: 0;
+  background-color: var(--secondary--color);
+}
+.navbar ul li{
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+.navbar ul li a{
+  padding: 20px;
+  display: block;
+  color: #000000;
+  font-weight: bold;
+  
+  text-decoration: none;
+}
+.navbar ul li a:hover{
+  color: var(--quarte--color);
+}
+
+/* Conversor */
+#convertidor{
+  margin: 10px;
+  padding: 20px;
+  background-color: var(--thrity--color);
+  border-radius: 25px;
+  max-width: 100%;
+  overflow: hidden;
+  border: 5px solid var(--primary--color);
+}
+
+.moneda{
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.moneda select{
+  padding: 10px 20px 10px 10px;
+  appearance: none;
+  border-radius: 10px;
+  background-color: var(--primary--color);
+  width: 30%;
+  ;
+}
+.moneda input{
+  border: 0;
+  text-align: right;
+  font-size: 1em;
+  width: 70%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: var(--primary--color);
+}
+
+/* Contacto */
+#contacto{
+  margin: 10px;
+  padding: 20px;
+  background-color: var(--thrity--color);
+  border-radius: 25px;
+  max-width: 100%;
+  overflow: hidden;
+  border: 5px solid var(--primary--color);
+}
+#contacto textarea#consulta {
+  display: block;
+  margin: 0 auto;
+  border: 0;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%; /* Ajusta el ancho al contenedor */
+  max-width: 100%; /* Asegura que no se desborde */
+  box-sizing: border-box;
+  resize: none; /* Opcional: evita que el usuario cambie el tamaño */
+}
+.botones{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+.botones .boton{
+  background-color: var(--fifth--color);
+  padding: 10px;
+}
+.datos input{
+  border: 0;
+  padding: 5px;
+  margin: 5px 0px 15px 0px;
+  font-size: 1em;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: var(--fifth--color);
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary--color);
+  padding: 20px;
+  text-align: center;
+}
+
+footer .contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1400px;
+}
+
+footer .parte1,
+footer .parte2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px; 
+}
+
+footer .parte1,
+footer .parte2 {
+  width: 100%;
+}
+
+footer .redes a {
+  display: inline-block;
+  margin: 0 10px;
+}
