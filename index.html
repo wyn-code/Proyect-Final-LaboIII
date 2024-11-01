@@ -1,15 +1,172 @@
 <!doctype html>
 <html lang="en">
+  
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <title>Vite App</title>
+
     <title>Wallet Coin</title>
+
   </head>
+  
   <body>
+
+    <header>
+      <div class="contenedor">
+          <!-- logo-->
+          <a href="#" class="logo"><img src="./img/logo.png" alt="Logo pagina"></a>
+          
+          <!-- menu -->
+          <input type="checkbox" id="menu">
+          <label for="menu">
+              <img src="./img/menu.png" class="menu-icono">
+          </label>
+          
+          <!-- navbar -->
+          <nav class="navbar">
+              <ul>
+                  <li><a href="#convertidor">Currency converter</a></li>
+                  <li><a href="#tipo">Type of currency (LIVE)</a></li>
+                  <li><a href="#contacto">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+  
+  <main> 
+
+    <section id="convertidor">
+        <div class="moneda">
+            <select id="primerMoneda">
+              <option value="USD" selected>USD</option>
+              <!-- ACA VAN TODAS LAS OPCIONES DE MONEDAS QUE SAQUEMOS DEL JSON DE LA API. YA DEJE USD SELECCIONADA POR DEFECTO -->
+            </select>
+
+            <input type="number" id="primerMonto" placeholder="0" value="1">
+        </div>
+
+        <div class="calcular">
+          <button class="btn" id="btn-calcular">Calcular</button>
+        </div>
+
+        <div class="valor-de-cambio" id="cambio"></div>
+
+        <div class="moneda">
+          <select id="segundaMoneda">
+            <option value="ARG" selected>ARG</option>
+            <!-- ACA VAN TODAS LAS OPCIONES DE MONEDAS QUE SAQUEMOS DEL JSON DE LA API. YA DEJE ARG SELECCIONADA POR DEFECTO -->
+          </select>
+
+          <input type="number" id="segundoMonto" placeholder="0">
+      </div>
+    </section>
+
+    <section id="tipo">
+      <div class="grafico">
+        <!-- ACA VA EL GRAFICO QUE TRAIGAMOS DE LA API -->
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="formulario">
+        <form action="#">
+          <div class="datos">
+              <label for="apellido">Apellido</label>
+              <input type="text" name="apellido" id="apellido" placeholder="Ingrese su Apellido">
+
+              <label for="nombre">Nombre</label>
+              <input type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre">
+
+              <label for="email">Mail</label>
+              <input type="email" name="email" id="email" placeholder="Ingrese su Mail">
+
+              <label for="telefono">Teléfono</label>
+              <input type="text" name="telefono" id="telefono" placeholder="Ingrese su teléfono" required>
+
+              <label for="localidad">Localidad</label>
+              <input type="text" name="localidad" id="localidad" placeholder="Ingrese su Localidad">
+
+              <label for="consulta">Comentarios</label>
+              <textarea name="consulta" id="consulta" cols="30" rows="5"></textarea>
+
+              <input type="submit" value="Enviar" class="boton">
+              <input type="reset" value="Borrar" class="boton">
+          </div>
+      </form>
+      </div>
+    </section>
+
+  </main>
+
+<!-- pie de pagina -->
+<footer class="datos" id="datos">
+  <div class="contenedor">
+      
+      <div class="parte1">
+
+        <div class="nosotros">
+          <h4>About Us</h4>
+          <div class="datos-nosotros">
+              <p>parrafo 1</p>
+              <p>parrafo 2</p>
+              <p>parrafo 3</p>
+              <p>parrafo 4</p>
+              <p>parrafo 5</p>
+          </div>
+        </div>
+
+        <div class="legales">
+          <h4>Legal</h4>
+          <div class="datos-legales">
+              <p>parrafo 1</p>
+              <p>parrafo 2</p>
+              <p>parrafo 3</p>
+          </div>
+        </div>
+
+        <div class="idiomas">
+          <h4>Lenguajes</h4>
+          <div class="datos-idiomas">
+              <p>parrafo 1</p>
+              <p>parrafo 2</p>
+              <p>parrafo 3</p>
+          </div>
+        </div>
+          
+      </div>
+       
+      <div class="parte2">
+
+        <div class="derechos">
+          <p>&copy; Currency-Converter 2024</p>
+        </div>
+
+        <div class="logo-footer">
+          <a href="#" class="logo"><img src="./img/logo.png" alt="Logo pagina"></a>
+        </div>
+
+        <div class="box">
+          <h4>Redes Sociales</h4>
+          <div class="redes">
+              <!-- Para no dejar el href vacio, hago que al clickear me dirija hacia el inicio -->
+              <a href="#"><img src="./IMG-WEB/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="./IMG-WEB/insta.png" alt="Instagram"></a>
+          <a href="#"><img src="./IMG-WEB/X.png" alt="Twitter"></a>
+        </div> 
+      </div>
+
+    </div>
+  </div>
+</footer>   
+
     <div id="app"></div>
     <script type="module" src="/main.js"></script>
+
   </body>
 </html>
