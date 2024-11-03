@@ -56,7 +56,7 @@ button:hover{
 header{
   background-color: var(--secondary--color);
   position:relative;
-      width: 100%;
+  width: 100%;
 }
 header .contenedor{
   display: flex;
@@ -139,8 +139,8 @@ header .contenedor{
   border-radius: 10px;
   background-color: var(--primary--color);
   width: 30%;
-  ;
 }
+
 .moneda input{
   border: 0;
   text-align: right;
@@ -230,4 +230,47 @@ footer .parte2 {
 footer .redes a {
   display: inline-block;
   margin: 0 10px;
+}
+
+@media screen and (max-width: 1280px)  {
+  
+#convert {
+  margin: 50px;
+  padding: 0;
+  width: 90%;
+  height: 300px;
+  display: flex;
+  background-color: var(--primary--color);
+  flex-direction: column;
+}
+
+.text-convert {
+  font-size: 15px;
+}
+
+.box-money {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-current p {
+  margin: 10px 0px;
+  padding: 0;
+  display: flex;
+  justify-content: start;
+}
+
+.box-country p {
+  margin: 10px 0px;
+  padding: 0;
+  display: flex;
+  justify-content: start;
+}
+
+.box {
+  width: 200px;
+  height: 30px;
+}
+
 }

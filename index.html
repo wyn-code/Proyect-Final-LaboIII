@@ -3,7 +3,7 @@
   
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
@@ -40,34 +40,32 @@
   </header>
   
   <main> 
-
-    <section id="convertidor">
-        <div class="moneda">
-            <select id="primerMoneda">
-              <option value="USD" selected>USD</option>
-              <!-- ACA VAN TODAS LAS OPCIONES DE MONEDAS QUE SAQUEMOS DEL JSON DE LA API. YA DEJE USD SELECCIONADA POR DEFECTO -->
-            </select>
-
-            <input type="number" id="primerMonto" placeholder="0" value="1">
+    <section id="convert">
+      <div class="box-money">
+        <div class="box-current">
+          <p class="text-convert">Amount: </p>
+          <input class="box" type="text">
         </div>
-
-        <div class="calcular">
-          <button class="btn" id="btn-calcular">Calcular</button>
+        <div class="box-country">
+          <p class="text-convert">From: </p>
+          <input class="box" type="text">
         </div>
-
-        <div class="valor-de-cambio" id="cambio"></div>
-
-        <div class="moneda">
-          <select id="segundaMoneda">
-            <option value="ARG" selected>ARG</option>
-            <!-- ACA VAN TODAS LAS OPCIONES DE MONEDAS QUE SAQUEMOS DEL JSON DE LA API. YA DEJE ARG SELECCIONADA POR DEFECTO -->
-          </select>
-
-          <input type="number" id="segundoMonto" placeholder="0">
+        <a href="">
+          <div class="circule">
+            <p>⇋</p>
+          </div>
+        </a>
+        <div class="box-country">
+          <p class="text-convert">To: </p>
+          <input class="box" type="text">
+        </div>
+      </div>
+      <div class="btm-convert">
+        <input type="button" value="Convert">
       </div>
     </section>
 
-    <section id="tipo">
+
       <div class="grafico">
         <!-- ACA VA EL GRAFICO QUE TRAIGAMOS DE LA API -->
       </div>
