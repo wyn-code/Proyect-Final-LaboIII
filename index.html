@@ -42,29 +42,33 @@
   <main> 
 
     <section id="convertidor">
-        <div class="moneda">
-            <select id="primerMoneda">
-              <option value="USD" selected>USD</option>
-              <!-- ACA VAN TODAS LAS OPCIONES DE MONEDAS QUE SAQUEMOS DEL JSON DE LA API. YA DEJE USD SELECCIONADA POR DEFECTO -->
+      <div>
+          <div class="moneda">
+              <select id="primerMoneda">
+                <option value="USD" selected>USD</option>
+                <!-- ACA VAN TODAS LAS OPCIONES DE MONEDAS QUE SAQUEMOS DEL JSON DE LA API. YA DEJE USD SELECCIONADA POR DEFECTO -->
+              </select>
+
+              <input type="number" id="primerMonto" placeholder="0" value="1">
+          </div>
+
+          <div class="valor-de-cambio" id="cambio"></div>
+          
+          <div class="moneda">
+            <select id="segundaMoneda">
+              <option value="ARG" selected>ARG</option>
+              <!-- ACA VAN TODAS LAS OPCIONES DE MONEDAS QUE SAQUEMOS DEL JSON DE LA API. YA DEJE ARG SELECCIONADA POR DEFECTO -->
             </select>
+            
+            <input type="number" id="segundoMonto" placeholder="0">
+          </div>
+          
+      </div>
 
-            <input type="number" id="primerMonto" placeholder="0" value="1">
-        </div>
-
-        <div class="calcular">
+        <div class="btn">
           <button class="btn" id="btn-calcular">Calcular</button>
         </div>
-
-        <div class="valor-de-cambio" id="cambio"></div>
-
-        <div class="moneda">
-          <select id="segundaMoneda">
-            <option value="ARG" selected>ARG</option>
-            <!-- ACA VAN TODAS LAS OPCIONES DE MONEDAS QUE SAQUEMOS DEL JSON DE LA API. YA DEJE ARG SELECCIONADA POR DEFECTO -->
-          </select>
-
-          <input type="number" id="segundoMonto" placeholder="0">
-      </div>
+        
     </section>
 
     <section id="tipo">
@@ -72,37 +76,53 @@
         <!-- ACA VA EL GRAFICO QUE TRAIGAMOS DE LA API -->
       </div>
     </section>
-
-    <section id="contacto">
-      <div class="formulario">
-        <form action="#">
-          <div class="datos">
-              <label for="apellido">Apellido</label>
-              <input type="text" name="apellido" id="apellido" placeholder="Ingrese su Apellido">
-
-              <label for="nombre">Nombre</label>
-              <input type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre">
-
-              <label for="email">Mail</label>
-              <input type="email" name="email" id="email" placeholder="Ingrese su Mail">
-
-              <label for="telefono">Teléfono</label>
-              <input type="text" name="telefono" id="telefono" placeholder="Ingrese su teléfono" required>
-
-              <label for="localidad">Localidad</label>
-              <input type="text" name="localidad" id="localidad" placeholder="Ingrese su Localidad">
-
-              <label for="consulta">Comentarios</label>
-              <textarea name="consulta" id="consulta" cols="30" rows="5"></textarea>
-
-              <div class="botones">
-                <input type="submit" value="Enviar" class="boton">
-                <input type="reset" value="Borrar" class="boton">
+    
+    <h1>Contact us</h1>
+    <div class="contact-container">
+      <form>
+          <div class="form-grid">
+              <div class="form-group">
+                  <label for="lastname">Lastname:</label>
+                  <input type="text" id="lastname" name="lastname" required>
               </div>
-            </div>
+
+              <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required>
+              </div>
+
+              <div class="form-group">
+                  <label for="character-number">Character Number:</label>
+                  <input type="text" id="character-number" name="character-number">
+              </div>
+
+              <div class="form-group">
+                  <label for="phone">Phone Number:</label>
+                  <input type="tel" id="phone" name="phone">
+              </div>
+
+              <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+              </div>
+
+              <div class="form-group message-group">
+                  <label for="message">Message:</label>
+                  <textarea id="message" name="message"></textarea>
+              </div>
+
+              <div class="form-group">
+                  <label for="country">Country:</label>
+                  <input type="text" id="country" name="country">
+              </div>
+
+              <div class="submit-group">
+                  <button type="submit" class="btn-formulario">Send</button>
+              </div>
+
+          </div>
       </form>
-      </div>
-    </section>
+  </div>
 
   </main>
 
