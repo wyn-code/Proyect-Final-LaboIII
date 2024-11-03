@@ -232,45 +232,45 @@ footer .redes a {
   margin: 0 10px;
 }
 
-@media screen and (max-width: 1280px)  {
+.box img{
+  width: 30px;
+}
+
+@media (min-width: 595px) {
   
-#convert {
-  margin: 50px;
-  padding: 0;
-  width: 90%;
-  height: 300px;
-  display: flex;
-  background-color: var(--primary--color);
-  flex-direction: column;
-}
+  /* Footer */
 
-.text-convert {
-  font-size: 15px;
-}
+  footer .parte1 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+  }
 
-.box-money {
-  margin: 10px;
-  display: flex;
-  justify-content: space-between;
-}
+  footer .parte2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+  }
 
-.box-current p {
-  margin: 10px 0px;
-  padding: 0;
-  display: flex;
-  justify-content: start;
-}
+  footer .parte1, .parte2 p {
+    font-size: 10px;
+  }
 
-.box-country p {
-  margin: 10px 0px;
-  padding: 0;
-  display: flex;
-  justify-content: start;
-}
+  .logo-footer img{
+    width: 100px;
+  }
 
-.box {
-  width: 200px;
-  height: 30px;
-}
+  .logo img{
+    width: 100px;
+  }
+
+  .logo-f {
+    position: relative;
+    right: 30px;
+  }
 
 }
