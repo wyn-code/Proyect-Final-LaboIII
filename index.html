@@ -16,31 +16,47 @@
   </head>
   
   <body>
-
-    <header>
-      <div class="contenedor">
-          <!-- logo-->
-          <a href="#" class="logo"><img src="./img/logo.png" alt="Logo pagina"></a>
-          
-          <!-- menu -->
-          <input type="checkbox" id="menu">
-          <label for="menu">
-              <img src="./img/menu.png" class="menu-icono">
-          </label>
-          
-          <!-- navbar -->
-          <nav class="navbar">
-              <ul>
-                  <li><a href="#convertidor">Currency convert</a></li>
-                  <li><a href="#tipo">Type of currency (LIVE)</a></li>
-                  <li><a href="#contacto">Contact</a></li>
-              </ul>
-          </nav>
-      </div>
-  </header>
+  </head>
   
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <!-- Checkbox oculto para el menú desplegable -->
+          <input type="checkbox" id="menu-toggle" class="menu-toggle">
+          
+          <!-- Etiqueta para el botón de menú -->
+          <label for="menu-toggle" class="menu-button" aria-label="Toggle menu">
+            <span class="menu-icon"></span>
+          </label>
+  
+          <!-- Logo (en el centro) -->
+          <a href="/" class="logo">
+            <img src="./img/silver.png" alt="Logo" class="logo-img">
+          </a>
+  
+          <!-- Iconos (a la derecha) -->
+          <div class="icons">
+            <a href="/" class="icon-link">
+              <img src="/Proyect-Final-LaboIII/img/usuario.png" alt="User Icon" class="logo-img">
+            </a>
+            <a href="/" class="icon-link">
+              <img src="./img/wallet.png" alt="Wallet Icon" class="logo-img">
+            </a>
+          </div>
+        </div>
+  
+        <!-- Navegación (fuera del header-content para el menú desplegable) -->
+        <nav class="nav" id="nav">
+          <a href="/converter" class="nav-link">Currency Converter</a>
+          <a href="/live" class="nav-link">Type of Currency (Live)</a>
+          <a href="/contact" class="nav-link">Contact</a>
+        </nav>
+  
+        <div class="curve"></div>
+      </div>
+    </header>
   <main> 
-
     <section id="convertidor">
         <div class="moneda">
             <select id="primerMoneda">
@@ -148,11 +164,6 @@
         <div class="derechos">
           <p>&copy; Currency-Converter 2024</p>
         </div>
-
-        <div class="logo-footer">
-          <a href="#" class="logo"><img src="./img/logo.png" alt="Logo pagina"></a>
-        </div>
-
         <div class="box">
           <h4>Redes Sociales</h4>
           <div class="redes">
