@@ -56,7 +56,7 @@ button:hover{
 header{
   background-color: var(--secondary--color);
   position:relative;
-      width: 100%;
+  width: 100%;
 }
 header .contenedor{
   display: flex;
@@ -139,8 +139,8 @@ header .contenedor{
   border-radius: 10px;
   background-color: var(--primary--color);
   width: 30%;
-  ;
 }
+
 .moneda input{
   border: 0;
   text-align: right;
@@ -314,5 +314,46 @@ button:hover {
   display: flex;
   justify-content: center;
 }
+=======
+.box img{
+  width: 30px;
+}
+
+@media (min-width: 595px) {
+  
+  /* Footer */
+
+  footer .parte1 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+  }
+
+  footer .parte2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+  }
+
+  footer .parte1, .parte2 p {
+    font-size: 10px;
+  }
+
+  .logo-footer img{
+    width: 100px;
+  }
+
+  .logo img{
+    width: 100px;
+  }
+
+  .logo-f {
+    position: relative;
+    right: 30px;
+  }
 
 }
