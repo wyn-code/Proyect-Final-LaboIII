@@ -17,10 +17,11 @@
   
   <body>
 
-    <header>
-      <div class="contenedor">
-          <!-- logo-->
-          <a href="#" class="logo"><img src="./img/logo.png" alt="Logo pagina"></a>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <!-- Checkbox oculto para el menú desplegable -->
+          <input type="checkbox" id="menu-toggle" class="menu-toggle">
           
           <!-- Etiqueta para el botón de menú -->
           <label for="menu-toggle" class="menu-button" aria-label="Toggle menu">
@@ -28,21 +29,20 @@
           </label>
   
           <!-- Logo (en el centro) -->
-          <a href="/" class="logo">
+          <a href="/" class="logo-t">
             <img src="./img/silver.png" alt="Logo" class="logo-img">
           </a>
   
           <!-- Iconos (a la derecha) -->
           <div class="icons">
             <a href="/" class="icon-link">
-              <img src="/Proyect-Final-LaboIII/img/usuario.png" alt="User Icon" class="logo-img">
+              <img src="./img/perfil.png" alt="User Icon" class="logo-img">
             </a>
             <a href="/" class="icon-link">
               <img src="./img/wallet.png" alt="Wallet Icon" class="logo-img">
             </a>
           </div>
         </div>
-  
         <!-- Navegación (fuera del header-content para el menú desplegable) -->
         <nav class="nav" id="nav">
           <a href="/converter" class="nav-link">Currency Converter</a>
