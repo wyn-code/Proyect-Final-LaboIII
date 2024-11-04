@@ -429,7 +429,6 @@ button:hover {
 @media (min-width: 595px) {
   
   /* Footer */
-
   footer .parte1 {
     display: flex;
     justify-content: space-between;
