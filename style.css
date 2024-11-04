@@ -231,3 +231,41 @@ footer .redes a {
   display: inline-block;
   margin: 0 10px;
 }
+
+@media (min-width: 595px) {
+  
+  /* Footer */
+  footer .parte1 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+  }
+
+  footer .parte2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+  }
+
+  footer .parte1, .parte2 p {
+    font-size: 10px;
+  }
+
+  .logo-footer img{
+    width: 100px;
+  }
+
+  .logo img{
+    width: 100px;
+  }
+
+  .logo-f {
+    position: relative;
+    right: 30px;
+  }
+
+}
