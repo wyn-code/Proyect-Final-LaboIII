@@ -3,12 +3,12 @@
   
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
 
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/silver.png" type="image/x-icon">
     <title>Vite App</title>
 
     <title>Wallet Coin</title>
@@ -22,87 +22,146 @@
           <!-- logo-->
           <a href="#" class="logo"><img src="./img/logo.png" alt="Logo pagina"></a>
           
-          <!-- menu -->
-          <input type="checkbox" id="menu">
-          <label for="menu">
-              <img src="./img/menu.png" class="menu-icono">
+          <!-- Etiqueta para el botón de menú -->
+          <label for="menu-toggle" class="menu-button" aria-label="Toggle menu">
+            <span class="menu-icon"></span>
           </label>
-          
-          <!-- navbar -->
-          <nav class="navbar">
-              <ul>
-                  <li><a href="#convertidor">Currency converter</a></li>
-                  <li><a href="#tipo">Type of currency (LIVE)</a></li>
-                  <li><a href="#contacto">Contact</a></li>
-              </ul>
-          </nav>
-      </div>
-  </header>
   
-  <main> 
-
-    <section id="convertidor">
-        <div class="moneda">
-            <select id="primerMoneda">
-              <option value="USD" selected>USD</option>
-              <!-- ACA VAN TODAS LAS OPCIONES DE MONEDAS QUE SAQUEMOS DEL JSON DE LA API. YA DEJE USD SELECCIONADA POR DEFECTO -->
-            </select>
-
-            <input type="number" id="primerMonto" placeholder="0" value="1">
+          <!-- Logo (en el centro) -->
+          <a href="/" class="logo">
+            <img src="./img/silver.png" alt="Logo" class="logo-img">
+          </a>
+  
+          <!-- Iconos (a la derecha) -->
+          <div class="icons">
+            <a href="/" class="icon-link">
+              <img src="/Proyect-Final-LaboIII/img/usuario.png" alt="User Icon" class="logo-img">
+            </a>
+            <a href="/" class="icon-link">
+              <img src="./img/wallet.png" alt="Wallet Icon" class="logo-img">
+            </a>
+          </div>
         </div>
+  
+        <!-- Navegación (fuera del header-content para el menú desplegable) -->
+        <nav class="nav" id="nav">
+          <a href="/converter" class="nav-link">Currency Converter</a>
+          <a href="/live" class="nav-link">Type of Currency (Live)</a>
+          <a href="/contact" class="nav-link">Contact</a>
+        </nav>
+  
+        <div class="curve"></div>
+      </div>
+    </header>
+  <main> 
+    <section id="convertidor">
+      <div>
+          <div class="moneda">
+              <select id="primerMoneda">
+                <option value="USD" selected>USD</option>
+                <!-- ACA VAN TODAS LAS OPCIONES DE MONEDAS QUE SAQUEMOS DEL JSON DE LA API. YA DEJE USD SELECCIONADA POR DEFECTO -->
+              </select>
 
-        <div class="calcular">
+              <input type="number" id="primerMonto" placeholder="0" value="1">
+          </div>
+
+          <div class="valor-de-cambio" id="cambio"></div>
+          
+          <div class="moneda">
+            <select id="segundaMoneda">
+              <option value="ARG" selected>ARG</option>
+              <!-- ACA VAN TODAS LAS OPCIONES DE MONEDAS QUE SAQUEMOS DEL JSON DE LA API. YA DEJE ARG SELECCIONADA POR DEFECTO -->
+            </select>
+            
+            <input type="number" id="segundoMonto" placeholder="0">
+          </div>
+          
+      </div>
+
+        <div class="btn">
           <button class="btn" id="btn-calcular">Calcular</button>
         </div>
-
-        <div class="valor-de-cambio" id="cambio"></div>
-
-        <div class="moneda">
-          <select id="segundaMoneda">
-            <option value="ARG" selected>ARG</option>
-            <!-- ACA VAN TODAS LAS OPCIONES DE MONEDAS QUE SAQUEMOS DEL JSON DE LA API. YA DEJE ARG SELECCIONADA POR DEFECTO -->
+        
+    </section>
+      <div class="moneda">
+          <select id="primerMoneda">
+            <option value="USD" selected>USD</option>
+            <!-- ACA VAN TODAS LAS OPCIONES DE MONEDAS QUE SAQUEMOS DEL JSON DE LA API. YA DEJE USD SELECCIONADA POR DEFECTO -->
           </select>
 
-          <input type="number" id="segundoMonto" placeholder="0">
+          <input type="number" id="primerMonto" placeholder="0" value="1">
       </div>
-    </section>
 
-    <section id="tipo">
+      <div class="calcular">
+        <button class="btn" id="btn-calcular">Calcular</button>
+      </div>
+
+      <div class="valor-de-cambio" id="cambio"></div>
+
+      <div class="moneda">
+        <select id="segundaMoneda">
+          <option value="ARG" selected>ARG</option>
+          <!-- ACA VAN TODAS LAS OPCIONES DE MONEDAS QUE SAQUEMOS DEL JSON DE LA API. YA DEJE ARG SELECCIONADA POR DEFECTO -->
+        </select>
+
+        <input type="number" id="segundoMonto" placeholder="0">
+    </div>
+  </section>
+
+
+
+
       <div class="grafico">
         <!-- ACA VA EL GRAFICO QUE TRAIGAMOS DE LA API -->
       </div>
     </section>
-
-    <section id="contacto">
-      <div class="formulario">
-        <form action="#">
-          <div class="datos">
-              <label for="apellido">Apellido</label>
-              <input type="text" name="apellido" id="apellido" placeholder="Ingrese su Apellido">
-
-              <label for="nombre">Nombre</label>
-              <input type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre">
-
-              <label for="email">Mail</label>
-              <input type="email" name="email" id="email" placeholder="Ingrese su Mail">
-
-              <label for="telefono">Teléfono</label>
-              <input type="text" name="telefono" id="telefono" placeholder="Ingrese su teléfono" required>
-
-              <label for="localidad">Localidad</label>
-              <input type="text" name="localidad" id="localidad" placeholder="Ingrese su Localidad">
-
-              <label for="consulta">Comentarios</label>
-              <textarea name="consulta" id="consulta" cols="30" rows="5"></textarea>
-
-              <div class="botones">
-                <input type="submit" value="Enviar" class="boton">
-                <input type="reset" value="Borrar" class="boton">
+    
+    <h1>Contact us</h1>
+    <div class="contact-container">
+      <form>
+          <div class="form-grid">
+              <div class="form-group">
+                  <label for="lastname">Lastname:</label>
+                  <input type="text" id="lastname" name="lastname" required>
               </div>
-            </div>
+
+              <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required>
+              </div>
+
+              <div class="form-group">
+                  <label for="character-number">Character Number:</label>
+                  <input type="text" id="character-number" name="character-number">
+              </div>
+
+              <div class="form-group">
+                  <label for="phone">Phone Number:</label>
+                  <input type="tel" id="phone" name="phone">
+              </div>
+
+              <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+              </div>
+
+              <div class="form-group message-group">
+                  <label for="message">Message:</label>
+                  <textarea id="message" name="message"></textarea>
+              </div>
+
+              <div class="form-group">
+                  <label for="country">Country:</label>
+                  <input type="text" id="country" name="country">
+              </div>
+
+              <div class="submit-group">
+                  <button type="submit" class="btn-formulario">Send</button>
+              </div>
+
+          </div>
       </form>
-      </div>
-    </section>
+  </div>
 
   </main>
 
@@ -115,29 +174,28 @@
         <div class="nosotros">
           <h4>About Us</h4>
           <div class="datos-nosotros">
-              <p>parrafo 1</p>
-              <p>parrafo 2</p>
-              <p>parrafo 3</p>
-              <p>parrafo 4</p>
-              <p>parrafo 5</p>
+              <p>Our Mission Statement</p>
+              <p>Our Vision and Values</p>
+              <p>History or Background</p>
+
           </div>
         </div>
 
         <div class="legales">
           <h4>Legal</h4>
           <div class="datos-legales">
-              <p>parrafo 1</p>
-              <p>parrafo 2</p>
-              <p>parrafo 3</p>
+              <p>Terms of conditions</p>
+              <p>Guarantiees</p>
+              <p>Privacy policy</p>
           </div>
         </div>
 
         <div class="idiomas">
           <h4>Lenguajes</h4>
           <div class="datos-idiomas">
-              <p>parrafo 1</p>
-              <p>parrafo 2</p>
-              <p>parrafo 3</p>
+              <p>English</p>
+              <p>Spanish</p>
+              <p>Portuguese</p>
           </div>
         </div>
           
@@ -146,7 +204,7 @@
       <div class="parte2">
 
         <div class="derechos">
-          <p>&copy; Currency-Converter 2024</p>
+          <p style="font-size: 20px;">&copy; Currency-Converter 2024</p>
         </div>
 
         <div class="logo-footer">
@@ -154,12 +212,11 @@
         </div>
 
         <div class="box">
-          <h4>Redes Sociales</h4>
           <div class="redes">
               <!-- Para no dejar el href vacio, hago que al clickear me dirija hacia el inicio -->
-              <a href="#"><img src="./IMG-WEB/facebook.png" alt="Facebook"></a>
-          <a href="#"><img src="./IMG-WEB/insta.png" alt="Instagram"></a>
-          <a href="#"><img src="./IMG-WEB/X.png" alt="Twitter"></a>
+              <a href="https://www.youtube.com/"><img src="./img/youtube.png" alt="Youtube" style="width: 33px; position: relative; top: 2px;"></a>
+          <a href="https://www.instagram.com/"><img src="./img/instagram (1).png" alt="Instagram"></a>
+          <a href="https://x.com/"><img src="./img/twitter.png" alt="Twitter" style="width: 30px;"></a>
         </div> 
       </div>
 
