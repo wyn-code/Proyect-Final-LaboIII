@@ -20,25 +20,39 @@
     <header>
       <div class="contenedor">
           <!-- logo-->
-          <a href="#" class="logo"><img src="./img/silver.png" alt="Logo pagina"></a>
+          <a href="#" class="logo"><img src="./img/logo.png" alt="Logo pagina"></a>
           
-          <!-- menu -->
-          <input type="checkbox" id="menu">
-          <label for="menu">
-              <img src="./img/menu.png" class="menu-icono">
+          <!-- Etiqueta para el botón de menú -->
+          <label for="menu-toggle" class="menu-button" aria-label="Toggle menu">
+            <span class="menu-icon"></span>
           </label>
-          
-          <!-- navbar -->
-          <nav class="navbar">
-              <ul>
-                  <li><a href="#convertidor">Currency converter</a></li>
-                  <li><a href="#tipo">Type of currency (LIVE)</a></li>
-                  <li><a href="#contacto">Contact</a></li>
-              </ul>
-          </nav>
-      </div>
-  </header>
   
+          <!-- Logo (en el centro) -->
+          <a href="/" class="logo">
+            <img src="./img/silver.png" alt="Logo" class="logo-img">
+          </a>
+  
+          <!-- Iconos (a la derecha) -->
+          <div class="icons">
+            <a href="/" class="icon-link">
+              <img src="/Proyect-Final-LaboIII/img/usuario.png" alt="User Icon" class="logo-img">
+            </a>
+            <a href="/" class="icon-link">
+              <img src="./img/wallet.png" alt="Wallet Icon" class="logo-img">
+            </a>
+          </div>
+        </div>
+  
+        <!-- Navegación (fuera del header-content para el menú desplegable) -->
+        <nav class="nav" id="nav">
+          <a href="/converter" class="nav-link">Currency Converter</a>
+          <a href="/live" class="nav-link">Type of Currency (Live)</a>
+          <a href="/contact" class="nav-link">Contact</a>
+        </nav>
+  
+        <div class="curve"></div>
+      </div>
+    </header>
   <main> 
     <section id="convertidor">
       <div>
@@ -194,9 +208,7 @@
         </div>
 
         <div class="logo-footer">
-          <a href="#" class="logo">
-            <img src="./img/silver.png" alt="Logo pagina" class="logo-f">
-          </a>
+          <a href="#" class="logo"><img src="./img/logo.png" alt="Logo pagina"></a>
         </div>
 
         <div class="box">
