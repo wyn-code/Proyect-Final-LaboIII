@@ -1,59 +1,51 @@
 <!doctype html>
 <html lang="en">
-  
+
+  <!-- HEAD-->
+
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/img/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
-
     <link rel="shortcut icon" href="./img/silver.png" type="image/x-icon">
     <title>Vite App</title>
-
     <title>Wallet Coin</title>
-
   </head>
-  
-  <body>
 
+  <!-- BODY -->
+
+  <body>
     <header class="header">
       <div class="container">
         <div class="header-content">
           <!-- Checkbox oculto para el menú desplegable -->
           <input type="checkbox" id="menu-toggle" class="menu-toggle">
-          
           <!-- Etiqueta para el botón de menú -->
           <label for="menu-toggle" class="menu-button" aria-label="Toggle menu">
             <span class="menu-icon"></span>
           </label>
-  
           <!-- Logo (en el centro) -->
-          <a href="/" class="logo-t">
-            <img src="./img/silver.png" alt="Logo" class="logo-img">
-          </a>
-  
+          <a href="/" class="logo-t"><img src="./img/silver.png" alt="Logo" class="logo-img"></a>
           <!-- Iconos (a la derecha) -->
+          <nav class="nav" id="nav">
+            <a href="#convertidor" class="nav-link">Currency Converter</a>
+            <a href="#datos" class="nav-link">Type of Currency (Live)</a>
+            <a href="#contacto" class="nav-link">Contact</a>
+          </nav>
           <div class="icons">
-            <a href="/" class="icon-link">
-              <img src="./img/perfil.png" alt="User Icon" class="logo-img">
-            </a>
-            <a href="/" class="icon-link">
-              <img src="./img/wallet.png" alt="Wallet Icon" class="logo-img">
-            </a>
+            <a href="/" class="icon-link"><img src="./img/perfil.png" alt="User Icon" class="logo-img"></a>
+            <a href="/" class="icon-link"><img src="./img/wallet.png" alt="Wallet Icon" class="logo-img"></a>
           </div>
+          <!-- Navegación (dentro del header-content para el menú desplegable) -->
         </div>
-        <!-- Navegación (fuera del header-content para el menú desplegable) -->
-        <nav class="nav" id="nav">
-          <a href="/converter" class="nav-link">Currency Converter</a>
-          <a href="/live" class="nav-link">Type of Currency (Live)</a>
-          <a href="/contact" class="nav-link">Contact</a>
-        </nav>
-  
         <div class="curve"></div>
       </div>
     </header>
-  
+
+  <!-- MAIN -->
+
   <main> 
     <section id="convertidor">
       <div class="moneda">
@@ -80,9 +72,6 @@
         <input type="number" id="segundoMonto" placeholder="0">
     </div>
   </section>
-
-
-
       <div class="grafico">
         <!-- ACA VA EL GRAFICO QUE TRAIGAMOS DE LA API -->
       </div>
@@ -120,6 +109,8 @@
     </section>
 
   </main>
+
+  <!-- FOOTER -->
 
 <!-- pie de pagina -->
 <footer class="datos" id="datos">
