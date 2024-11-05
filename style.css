@@ -11,20 +11,17 @@
 *{
   box-sizing: border-box;
   padding: 0;
+  margin: 0;
   list-style: none;
 }
 
-html{
+html, body{
   scroll-behavior: smooth;
-}
-
-body{
-  margin: 0;
   font-family: var(--font--family);
   background-color: var(--quarte--color);
-  display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100vh;
 }
 
 h1{ font-size: 3.5em;}
@@ -42,6 +39,7 @@ button{
   color: black;
   cursor: pointer;
 }
+
 button:hover{
   background-color: var(--quarte--color);
   font-weight:bold;
@@ -60,11 +58,46 @@ button:hover{
   align-items: center;
   height: 4rem;
   padding: 0 25px;
+  position: relative;
 }
 
 .logo-img {
-  height: 90px;
+  height: 30px;
   width: auto;
+}
+
+.logo-img:hover {
+  transform: translateY(-1px);
+  -webkit-transform: translateY(-1px);
+  -moz-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  -o-transform: translateY(-1px);
+  transition: 0.6s ease;
+  -webkit-transition: 0.6s ease;
+  -moz-transition: 0.6s ease;
+  -ms-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+  height: 40px;
+}
+
+.logo-img ::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+ 
+  transform: scaleX(0);
+  transition: transform 1s ease;
+  -webkit-transition: transform 1s ease;
+  -moz-transition: transform 1s ease;
+  -ms-transition: transform 1s ease;
+  -o-transition: transform 1s ease;
+}
+
+.logo-img :hover::after {
+  transform: scaleX(1);
 }
 
 .menu-toggle {
@@ -116,10 +149,40 @@ button:hover{
   font-size: 0.875rem;
   transition: opacity 0.3s;
   margin: 0 1rem;
+  transition: transform 0.5s ease, font-size 0.5s ease, text-shadow 0.5s ease;
+  -webkit-transition: transform 0.5s ease, font-size 0.5s ease, text-shadow 0.5s ease;
+  -moz-transition: transform 0.5s ease, font-size 0.5s ease, text-shadow 0.5s ease;
+  -ms-transition: transform 0.5s ease, font-size 0.5s ease, text-shadow 0.5s ease;
+  -o-transition: transform 0.5s ease, font-size 0.5s ease, text-shadow 0.5s ease;
 }
 
 .nav-link:hover {
-  opacity: 0.8;
+  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+  text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+  font-size: 20px;
+}
+
+.nav-links ::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -ms-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+}
+
+.nav-links :hover::after {
+  transform: scaleX(1);
 }
 
 .icons {
@@ -127,7 +190,7 @@ button:hover{
   gap: 1.5rem;
 }
 
-.icon-link img {
+.icon-link img{
   height: 30px;
   width: auto;
 }
@@ -136,7 +199,7 @@ button:hover{
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2rem;
+  height: 1rem;
   background-color: var(--quarte--color);
   border-radius: 50% 50% 0 0;
 }
@@ -263,6 +326,10 @@ footer .redes a {
   width: 30px;
 }
 
+.logo img{
+  width: 80px;
+}
+
 /* Estilo para la navegación header responsive */
 @media (max-width: 768px) {
   .menu-button {
@@ -274,28 +341,30 @@ footer .redes a {
     order: 1;
   }
 
+  .icons {
+    order: 3;
+  }
+
   .nav {
-    display: flex;
+    
+    display: none;
     flex-direction: column;
     align-items: center;
-    background-color: var(--secondary--color);
+    background-color: #304479;
     position: absolute;
-    top: 4rem;
+    top: 100%;
     left: 0;
     right: 0;
     z-index: 1;
     padding: 0;
-    transition: all 0s ease;
-    max-height: 0;
-    overflow: hidden;
-    -webkit-transition: all 0s ease;
-    -moz-transition: all 0s ease;
-    -ms-transition: all 0s ease;
-    -o-transition: all 0s ease;
+    -webkit-box-shadow: 0px -10px 5px 0px rgba(57,82,143,0.29);
+    -moz-box-shadow: 0px -10px 5px 0px rgba(57,82,143,0.29);
+    box-shadow: 0px -10px 5px 0px rgba(57,82,143,0.29);
+
 }
 
   .menu-toggle:checked ~ .nav {
-    max-height: 300px; /* Ajusta este valor según sea necesario */
+    display: flex;
     padding: 1rem 0;
   }
 
@@ -306,7 +375,12 @@ footer .redes a {
   .menu-toggle:checked ~ .menu-button .menu-icon::before {
     transform: rotate(45deg);
     top: 0;
-  }
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+  
+}
 
   .menu-toggle:checked ~ .menu-button .menu-icon::after {
     transform: rotate(-45deg);
@@ -316,20 +390,10 @@ footer .redes a {
   .nav-link {
     font-size: 1rem;
     margin: 0.5rem 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  .menu-toggle:checked ~ .nav .nav-link {
-    opacity: 1;
-  }
-
-  .icons {
-    display: none;
   }
 
   .header-content {
-    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
