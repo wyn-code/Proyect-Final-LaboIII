@@ -7,12 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
-
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <title>Vite App</title>
-
     <title>Wallet Coin</title>
-
   </head>
   
   <body>
@@ -36,7 +33,19 @@
                   <li><a href="#contacto">Contact</a></li>
               </ul>
           </nav>
+
+         <!-- iconos de perfil y billetera -->
+         <div class="iconos-header">
+          <a href="#" class="icono">
+            <img src="./img/usuario.png" alt="User Icon" class="logo-img">
+          </a>
+          <a href="#" class="icono">
+            <img src="./img/wallet.png" alt="Wallet Icon" class="logo-img">
+          </a>
+        </div>
       </div>
+      <!-- Curvar header -->
+      <div class="curve"></div>
   </header>
   
   <main> 
@@ -67,7 +76,7 @@
       </div>
     </section>
 
-    <section id="tipo">
+    <section id="grafico-de-cambio">
       <div class="grafico">
         <!-- ACA VA EL GRAFICO QUE TRAIGAMOS DE LA API -->
       </div>
@@ -110,56 +119,53 @@
 <footer class="datos" id="datos">
   <div class="contenedor">
       
-      <div class="parte1">
+    <div class="parte1">
 
-        <div class="nosotros">
-          <h4>About Us</h4>
-          <div class="datos-nosotros">
-              <p>parrafo 1</p>
-              <p>parrafo 2</p>
-              <p>parrafo 3</p>
-              <p>parrafo 4</p>
-              <p>parrafo 5</p>
-          </div>
+      <div class="nosotros">
+        <h4>About Us</h4>
+        <div class="datos-nosotros">
+          <p>Our Mission Statement</p>
+          <p>Our Vision and Values</p>
+          <p>History or Background</p>
         </div>
-
-        <div class="legales">
-          <h4>Legal</h4>
-          <div class="datos-legales">
-              <p>parrafo 1</p>
-              <p>parrafo 2</p>
-              <p>parrafo 3</p>
-          </div>
-        </div>
-
-        <div class="idiomas">
-          <h4>Lenguajes</h4>
-          <div class="datos-idiomas">
-              <p>parrafo 1</p>
-              <p>parrafo 2</p>
-              <p>parrafo 3</p>
-          </div>
-        </div>
-          
       </div>
+
+      <div class="legales">
+        <h4>Legal</h4>
+        <div class="datos-legales">
+          <p>Terms of conditions</p>
+          <p>Guarantiees</p>
+          <p>Privacy policy</p>
+        </div>
+      </div>
+
+      <div class="idiomas">
+        <h4>Lenguajes</h4>
+        <div class="datos-idiomas">
+          <p>English</p>
+          <p>Spanish</p>
+          <p>Portuguese</p>
+        </div>
+      </div>  
+    </div>
        
-      <div class="parte2">
+    <div class="parte2">
 
-        <div class="derechos">
-          <p>&copy; Currency-Converter 2024</p>
-        </div>
+      <div class="derechos">
+        <p>&copy; Currency-Converter 2024</p>
+      </div>
 
-        <div class="logo-footer">
-          <a href="#" class="logo"><img src="./img/logo.png" alt="Logo pagina"></a>
-        </div>
+      <div class="logo-footer">
+        <a href="#" class="logo"><img src="./img/logo.png" alt="Logo pagina" class="logo-f"></a>
+      </div>
 
-        <div class="box">
-          <h4>Redes Sociales</h4>
-          <div class="redes">
-              <!-- Para no dejar el href vacio, hago que al clickear me dirija hacia el inicio -->
-              <a href="#"><img src="./IMG-WEB/facebook.png" alt="Facebook"></a>
-          <a href="#"><img src="./IMG-WEB/insta.png" alt="Instagram"></a>
-          <a href="#"><img src="./IMG-WEB/X.png" alt="Twitter"></a>
+      <div class="box">
+        <div class="redes">
+
+          <a href="https://www.youtube.com/"><img src="./img/youtube.png" alt="Youtube" class="imagen-red1"></a>
+          <a href="https://www.instagram.com/"><img src="./img/instagram (1).png" alt="Instagram" class="imagen-red2"></a>
+          <a href="https://x.com/"><img src="./img/twitter.png" alt="Twitter" class="imagen-red3"></a>
+
         </div> 
       </div>
 
