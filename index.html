@@ -1,84 +1,82 @@
 <!doctype html>
 <html lang="en">
-
-  <!-- HEAD-->
-
+  
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/img/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./img/silver.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <title>Vite App</title>
     <title>Wallet Coin</title>
   </head>
-
-          
-  <!-- BODY -->
-
+  
   <body>
-    <header class="header">
-      <div class="container">
-        <div class="header-content">
-          <!-- Checkbox oculto para el menú desplegable -->
-          <input type="checkbox" id="menu-toggle" class="menu-toggle">
-          <!-- Etiqueta para el botón de menú -->
-          <label for="menu-toggle" class="menu-button" aria-label="Toggle menu">
-            <span class="menu-icon"></span>
+
+    <header>
+      <div class="contenedor">
+          <!-- logo-->
+          <a href="#" class="logo"><img src="./img/silver.png" alt="Logo pagina"></a>
+          
+          <!-- menu -->
+          <input type="checkbox" id="menu">
+          <label for="menu">
+              <img src="./img/menu.png" class="menu-icono">
           </label>
-          <!-- Logo (en el centro) -->
-          <a href="/" class="logo-t"><img src="./img/silver.png" alt="Logo" class="logo-img"></a>
-          <!-- Iconos (a la derecha) -->
-          <nav class="nav" id="nav">
-            <a href="#convertidor" class="nav-link">Currency Converter</a>
-            <a href="#datos" class="nav-link">Type of Currency (Live)</a>
-            <a href="#contacto" class="nav-link">Contact</a>
+          
+          <!-- navbar -->
+          <nav class="navbar">
+              <ul>
+                  <li><a href="#convertidor">Currency converter</a></li>
+                  <li><a href="#tipo">Type of currency (LIVE)</a></li>
+                  <li><a href="#contacto">Contact</a></li>
+              </ul>
           </nav>
-          <div class="icons">
 
-            <a href="/" class="icon-link">
-              <img src="./img/usuario.png" alt="User Icon" class="logo-img">
-            </a>
-            <a href="/" class="icon-link">
-              <img src="./img/wallet.png" alt="Wallet Icon" class="logo-img">
-            </a>
-
-          </div>
-          <!-- Navegación (dentro del header-content para el menú desplegable) -->
+         <!-- iconos de perfil y billetera -->
+         <div class="iconos-header">
+          <a href="#" class="icono">
+            <img src="./img/usuario.png" alt="User Icon" class="logo-img">
+          </a>
+          <a href="#" class="icono">
+            <img src="./img/wallet.png" alt="Wallet Icon" class="logo-img">
+          </a>
         </div>
-        <div class="curve"></div>
       </div>
-    </header>
-
-  <!-- MAIN -->
-
+      <!-- Curvar header -->
+      <div class="curve"></div>
+  </header>
+  
   <main> 
+
     <section id="convertidor">
-      <div class="moneda">
-          <select id="primerMoneda">
-            <option value="USD" selected>USD</option>
-            <!-- ACA VAN TODAS LAS OPCIONES DE MONEDAS QUE SAQUEMOS DEL JSON DE LA API. YA DEJE USD SELECCIONADA POR DEFECTO -->
+        <div class="moneda">
+            <select id="primerMoneda">
+              <option value="USD" selected>USD</option>
+              <!-- ACA VAN TODAS LAS OPCIONES DE MONEDAS QUE SAQUEMOS DEL JSON DE LA API. YA DEJE USD SELECCIONADA POR DEFECTO -->
+            </select>
+
+            <input type="number" id="primerMonto" placeholder="0" value="1">
+        </div>
+
+        <div class="calcular">
+          <button class="btn" id="btn-calcular">Calcular</button>
+        </div>
+
+        <div class="valor-de-cambio" id="cambio"></div>
+
+        <div class="moneda">
+          <select id="segundaMoneda">
+            <option value="ARG" selected>ARG</option>
+            <!-- ACA VAN TODAS LAS OPCIONES DE MONEDAS QUE SAQUEMOS DEL JSON DE LA API. YA DEJE ARG SELECCIONADA POR DEFECTO -->
           </select>
 
-          <input type="number" id="primerMonto" placeholder="0" value="1">
+          <input type="number" id="segundoMonto" placeholder="0">
       </div>
+    </section>
 
-      <div class="calcular">
-        <button class="btn" id="btn-calcular">Calcular</button>
-      </div>
-
-      <div class="valor-de-cambio" id="cambio"></div>
-
-      <div class="moneda">
-        <select id="segundaMoneda">
-          <option value="ARG" selected>ARG</option>
-          <!-- ACA VAN TODAS LAS OPCIONES DE MONEDAS QUE SAQUEMOS DEL JSON DE LA API. YA DEJE ARG SELECCIONADA POR DEFECTO -->
-        </select>
-
-        <input type="number" id="segundoMonto" placeholder="0">
-    </div>
-  </section>
+    <section id="grafico-de-cambio">
       <div class="grafico">
         <!-- ACA VA EL GRAFICO QUE TRAIGAMOS DE LA API -->
       </div>
@@ -117,63 +115,57 @@
 
   </main>
 
-  <!-- FOOTER -->
-
 <!-- pie de pagina -->
 <footer class="datos" id="datos">
   <div class="contenedor">
       
-      <div class="parte1">
+    <div class="parte1">
 
-        <div class="nosotros">
-          <h4>About Us</h4>
-          <div class="datos-nosotros">
-              <p>Our Mission Statement</p>
-              <p>Our Vision and Values</p>
-              <p>History or Background</p>
-
-          </div>
+      <div class="nosotros">
+        <h4>About Us</h4>
+        <div class="datos-nosotros">
+          <p>Our Mission Statement</p>
+          <p>Our Vision and Values</p>
+          <p>History or Background</p>
         </div>
-
-        <div class="legales">
-          <h4>Legal</h4>
-          <div class="datos-legales">
-              <p>Terms of conditions</p>
-              <p>Guarantiees</p>
-              <p>Privacy policy</p>
-          </div>
-        </div>
-
-        <div class="idiomas">
-          <h4>Lenguajes</h4>
-          <div class="datos-idiomas">
-              <p>English</p>
-              <p>Spanish</p>
-              <p>Portuguese</p>
-          </div>
-        </div>
-          
       </div>
+
+      <div class="legales">
+        <h4>Legal</h4>
+        <div class="datos-legales">
+          <p>Terms of conditions</p>
+          <p>Guarantiees</p>
+          <p>Privacy policy</p>
+        </div>
+      </div>
+
+      <div class="idiomas">
+        <h4>Lenguajes</h4>
+        <div class="datos-idiomas">
+          <p>English</p>
+          <p>Spanish</p>
+          <p>Portuguese</p>
+        </div>
+      </div>  
+    </div>
        
-      <div class="parte2">
+    <div class="parte2">
 
-        <div class="derechos">
-          <p style="font-size: 20px;">&copy; Currency-Converter 2024</p>
-        </div>
+      <div class="derechos">
+        <p>&copy; Currency-Converter 2024</p>
+      </div>
 
-        <div class="logo-footer">
+      <div class="logo-footer">
+        <a href="#" class="logo"><img src="./img/silver.png" alt="Logo pagina" class="logo-f"></a>
+      </div>
 
-          <a href="#" class="logo">
-            <img src="./img/silver.png" alt="Logo pagina" class="logo-f">
-          </a>
-        </div>
+      <div class="box">
+        <div class="redes">
 
-        <div class="box">
-          <div class="redes">
-              <!-- Para no dejar el href vacio, hago que al clickear me dirija hacia el inicio -->
-          <a href="https://www.youtube.com/"><img src="./img/youtube.png" alt="Youtube" style="width: 33px; position: relative; top: 2px;"></a>
-          <a href="https://www.instagram.com/"><img src="./img/instagram (1).png" alt="Instagram"></a>
-          <a href="https://x.com/"><img src="./img/twitter.png" alt="Twitter" style="width: 30px;"></a>
+          <a href="https://www.youtube.com/"><img src="./img/youtube.png" alt="Youtube" class="imagen-red1"></a>
+          <a href="https://www.instagram.com/"><img src="./img/instagram (1).png" alt="Instagram" class="imagen-red2"></a>
+          <a href="https://x.com/"><img src="./img/twitter.png" alt="Twitter" class="imagen-red3"></a>
+
         </div> 
       </div>
 
