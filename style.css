@@ -30,7 +30,7 @@ body{
 h1{ font-size: 3.5em;}
 h2{ font-size: 2.8em; text-align: center;}
 h3{ font-size: 2em;}
-h4{ font-size: 1.8em;}
+h4{ font-size: 1.8em; text-align: center;}
 p{ font-size: 1.25em; text-align: center;}
 
 button{
@@ -43,8 +43,8 @@ button{
   cursor: pointer;
 }
 button:hover{
-  background-color: var(--quarte--color);
-  font-weight:bold;
+  background-color: var(--secondary--color);
+  color: var(--fifth--color);
 }
 
 /* Header */
@@ -101,6 +101,8 @@ header .contenedor{
 .navbar{
   max-height: 0;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
   background-color: var(--secondary--color);
   transition: max-height 0.5s ease-in-out;
 }
@@ -115,17 +117,36 @@ header .contenedor{
   width: 100%;
 }
 .navbar ul li a{
+  display: inline-block;
+  width: 100%;
   padding: 20px;
   display: block;
   color: var(--thrity--color);
   font-weight: bold;
   transition: transform 0.5s ease;
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
 }
 .navbar ul li a:hover{
   color: var(--fifth--color);
   transform: scale(1.2);
   text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+}
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px; /* Grosor de la línea subrayada */
+  background-color: var(--fifth--color); /* Color de la línea */
+  transition: width 0.5s ease, left 0.5s ease; /* Animación para el efecto */
+}
+
+.navbar ul li a:hover::after {
+  width: 100%; /* La línea ocupa todo el largo */
+  left: 0; /* La línea  empieza desde el centro y se expande */
 }
 /* Iconos Perfil y Billetera */
 .iconos-header {
@@ -147,6 +168,7 @@ header .contenedor{
 #convertidor{
   margin: 10px;
   padding: 20px;
+  margin-bottom: 100px;
   background-color: var(--thrity--color);
   border-radius: 25px;
   max-width: 100%;
@@ -178,10 +200,14 @@ header .contenedor{
   background-color: var(--primary--color);
   color: white;
 }
+.valor-de-cambio{
+  padding-top: 15px;
+}
 
 /* Contacto */
 #contacto{
   margin: 10px;
+  margin-bottom: 100px;
   padding: 20px;
   background-color: var(--thrity--color);
   border-radius: 25px;
@@ -337,11 +363,13 @@ footer .box .redes .imagen-red3:hover {
     width: 100%;
     max-width: 770px;
     margin: 10px auto;
+    margin-bottom: 100px;
     padding: 20px;
   }
   /*hago que el convertidor deje de crecer*/
   #convertidor {
-    margin: 10px auto;
+  margin: 10px auto;
+  margin-bottom: 100px;
   padding: 20px;
   width: 100%;
   max-width: 770px;
@@ -393,6 +421,7 @@ footer .box .redes .imagen-red3:hover {
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 20px;
   }
   .navbar ul {
     display: flex;
@@ -407,6 +436,7 @@ footer .box .redes .imagen-red3:hover {
     display: block;
     text-align: center;
     font-size: 1.1em;
+    white-space: nowrap;
   }
 
   /*agrego distancia en el footer*/
